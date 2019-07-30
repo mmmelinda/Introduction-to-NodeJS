@@ -21,7 +21,7 @@ fs.readFile(filePath, {encoding: 'utf-8'}, (err, data) => {
         output.push(obj);        
     }
     
-    jsonOutput = JSON.stringify(output);    
+    jsonOutput = JSON.stringify(output, null, 2);    
     
     fs.writeFile('customer-data.json', jsonOutput, 'utf8', (err) => {
         if(err) throw err;
